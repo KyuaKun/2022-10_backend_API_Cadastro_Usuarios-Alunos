@@ -5,9 +5,8 @@ export default class Aluno extends Model {
     super.init(
       {
         id: {
-          type: DataTypes.INTEGER,
-          // defaulValue: Sequelize.UUIDV4,
-          autoIncrement: true,
+          type: DataTypes.UUID,
+          defaultValue: DataTypes.UUIDV4,
           allowNull: false,
           primaryKey: true,
         },
@@ -15,21 +14,42 @@ export default class Aluno extends Model {
         name: {
           type: DataTypes.STRING,
           allowNull: false,
+          validate: {
+            len: {
+              args: [3, 80],
+              msg: "Campo 'nome' deve ter entre (min)3 e (max)80 caracteres",
+            },
+          },
         },
 
         lastName: {
           type: DataTypes.STRING,
           allowNull: false,
+          validate: {
+            len: {
+              args: [3, 80],
+              msg: "Campo 'sobrenome' deve ter entre (min)3 e (max)80 caracteres",
+            },
+          },
         },
 
         age: {
           type: DataTypes.STRING,
           allowNull: false,
+          validate: {
+            isInt: {
+              msg: "Campo 'idade' aceita apenas números sem vírgulas ou pontos.",
+            },
+            notNull: {
+              msg: "Campo 'idade' não pode permanecer vazio.",
+            },
+          },
         },
       },
       {
         sequelize,
       }
     );
+    return this;
   }
 }

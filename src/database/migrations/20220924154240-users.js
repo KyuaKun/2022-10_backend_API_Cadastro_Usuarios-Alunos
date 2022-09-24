@@ -3,8 +3,7 @@ module.exports = {
     return queryInterface.createTable("users", {
       id: {
         type: Sequelize.UUID,
-        // defaultValue: Sequelize.UUIDV4,
-        // autoIncrement: true,
+        defaultValue: Sequelize.UUIDV4,
         allowNull: false,
         primaryKey: true,
       },
@@ -15,7 +14,7 @@ module.exports = {
         unique: true,
       },
 
-      password: {
+      password_hash: {
         type: Sequelize.STRING,
         allowNull: false,
       },
