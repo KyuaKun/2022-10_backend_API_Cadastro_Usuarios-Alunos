@@ -1,0 +1,33 @@
+{
+  "name": "modulo04_crud_orientado-ao-objeto_estudo_de_caso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Formacao-Node-js/modulo04_CRUD_Orientado-ao-Objeto_Estudo_de_Caso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Formacao-Node-js/modulo04_CRUD_Orientado-ao-Objeto_Estudo_de_Caso/issues"
+  },
+  "homepage": "https://github.com/Formacao-Node-js/modulo04_CRUD_Orientado-ao-Objeto_Estudo_de_Caso#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.23.1",
+    "sequelize-cli": "^6.4.1",
+    "sucrase": "^3.27.0",
+    "uuid": "^9.0.0"
+  }
+}
