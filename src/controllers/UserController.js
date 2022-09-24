@@ -2,12 +2,12 @@ import User from "../models/User";
 
 class UserController {
   async store(req, res) {
-    const newUser = await User.create({
-      email: "vini@vini.com",
-      password: "vinicius2304",
+    const user = await User.create({
+      email: "viisd121212assadsdsasasadsii@vini.com",
+      password: "                 ",
     });
 
-    return res.json({ newUser });
+    return res.json({ new_user: user });
   }
 }
 

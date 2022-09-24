@@ -12,7 +12,7 @@ module.exports = {
     underscoredAll: true,
   },
   dialectOptions: {
-    timezone: "America/Sao_Paulo",
+    timezone: "local",
   },
   timezone: "America/Sao_Paulo",
 };

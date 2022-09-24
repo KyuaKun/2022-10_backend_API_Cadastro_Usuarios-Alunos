@@ -41,6 +41,10 @@ export default class User extends Model {
               args: [6, 50],
               msg: "Senha deve conter no mínimo 6 caracteres",
             },
+            is: {
+              args: ["^[a-z0-9]+$", "i",],
+              msg: "oioisfosfodsaosiafosaiodsaifdsaoifdsaoif",
+            },
           },
         },
       },
