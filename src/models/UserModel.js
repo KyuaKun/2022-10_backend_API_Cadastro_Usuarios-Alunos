@@ -15,7 +15,9 @@ export default class User extends Model {
         email: {
           type: DataTypes.STRING,
           allowNull: false,
-          unique: true,
+          unique: {
+            msg: "Email já existe.",
+          },
           validate: {
             isEmail: {
               msg: "Insira um email válido.",
@@ -51,7 +53,9 @@ export default class User extends Model {
       }
     );
     this.addHook("beforeSave", async (user) => {
-      user.password_hash = await bcryptjs.hash(user.password, 10);
+      if (user.password) {
+        user.password_hash = await bcryptjs.hash(user.password, 10);
+      }
     });
     return this;
   }
