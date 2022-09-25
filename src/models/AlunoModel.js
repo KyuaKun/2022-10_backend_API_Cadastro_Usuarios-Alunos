@@ -20,6 +20,12 @@ export default class Aluno extends Model {
               msg: "Campo 'nome' deve ter entre (min)3 e (max)80 caracteres",
             },
           },
+          validate: {
+            isAlpha: {
+              args: true,
+              msg: "Este campo só aceita letras.",
+            },
+          },
         },
 
         lastName: {
@@ -31,6 +37,12 @@ export default class Aluno extends Model {
               msg: "Campo 'sobrenome' deve ter entre (min)3 e (max)80 caracteres",
             },
           },
+          validate: {
+            isAlpha: {
+              args: true,
+              msg: "Este campo só aceita letras.",
+            },
+          },
         },
 
         age: {
@@ -40,6 +52,8 @@ export default class Aluno extends Model {
             isInt: {
               msg: "Campo 'idade' aceita apenas números sem vírgulas ou pontos.",
             },
+          },
+          validate: {
             notNull: {
               msg: "Campo 'idade' não pode permanecer vazio.",
             },

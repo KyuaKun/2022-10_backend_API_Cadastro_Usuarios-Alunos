@@ -20,10 +20,6 @@ export default class User extends Model {
             isEmail: {
               msg: "Insira um email válido.",
             },
-            len: {
-              args: [3, 100],
-              msg: "Insira um email válido.",
-            },
           },
         },
 
@@ -41,9 +37,11 @@ export default class User extends Model {
               args: [6, 50],
               msg: "Senha deve conter no mínimo 6 caracteres",
             },
+          },
+          validate: {
             is: {
-              args: ["^[a-z0-9]+$", "i",],
-              msg: "oioisfosfodsaosiafosaiodsaifdsaoifdsaoif",
+              args: ["^[a-z0-9]+$", "i"],
+              msg: "Senha não pode conter espaços em branco.",
             },
           },
         },
