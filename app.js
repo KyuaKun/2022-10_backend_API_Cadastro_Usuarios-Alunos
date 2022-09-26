@@ -5,6 +5,7 @@ import "./src/database";
 
 import express from "express";
 import UserRoutes from "./src/routes/UserRoutes";
+import TokenRoutes from "./src/routes/TokenRoutes";
 
 export class App {
   constructor() {
@@ -20,6 +21,7 @@ export class App {
 
   routes() {
     this.app.use("/users", UserRoutes);
+    this.app.use("/auth", TokenRoutes);
   }
 }
 
