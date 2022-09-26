@@ -42,13 +42,32 @@ class UserController {
       if (!user) {
         return res.status(404).json({ error: "Nenhum usuário encontrado." });
       }
-
-      await UserModel.update(req.body, { where: { id } });
+      const { email, password } = req.body;
+      await UserModel.update(
+        { email: email, password: password },
+        { where: { id } }
+      );
       return res.status(200).json({ response: "Usuário atualizado." });
     } catch (msg) {
       return res
         .status(400)
         .json({ error: msg.errors.map((err) => err.message) });
+    }
+  }
+
+  async delete(req, res) {
+    try {
+      const { id } = req.params;
+      const user = await UserModel.findByPk(id);
+      if (!user) {
+        return res.status(404).json({ error: "Nenhum usuário encontrado." });
+      }
+
+      await user.destroy();
+      return res.status(200).json({ response: "Usuário deletado." });
+    } catch (msg) {
+      console.log(msg);
+      return res.status(400).json({ error: "Algo inesperado aconteceu." });
     }
   }
 }
