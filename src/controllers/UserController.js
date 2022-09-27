@@ -3,6 +3,12 @@ import UserModel from "../models/UserModel";
 class UserController {
   async store(req, res) {
     try {
+      if (req.body.role == 1) {
+        return res.status(400).json({
+          error:
+            "Está rota não tem permissão para criar usuários administradores.",
+        });
+      }
       const user = await UserModel.create(req.body);
       const { id, email, username } = user;
       return res.status(201).json({ new_user: { id, email, username } });

@@ -16,7 +16,13 @@ export default class User extends Model {
           type: DataTypes.INTEGER,
           defaultValue: 0,
           allowNull: true,
-          isIn: [[0, 1]],
+          validate: {
+            customValidator(value) {
+              if (value != 0 || value != 1) {
+                throw new Error("Campo 'role' só aceita 0 ou 1.");
+              }
+            },
+          },
         },
 
         username: {
@@ -29,6 +35,12 @@ export default class User extends Model {
             len: {
               args: [3, 80],
               msg: "Campo 'nome de usuário' deve ter entre (min)3 e (max)80 caracteres",
+            },
+          },
+          validate: {
+            is: {
+              args: ["^[a-z0-9]+$", "i"],
+              msg: "Nome usuário não pode conter espaços em branco.",
             },
           },
         },
