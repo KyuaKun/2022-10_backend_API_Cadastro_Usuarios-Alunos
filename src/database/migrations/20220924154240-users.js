@@ -8,6 +8,12 @@ module.exports = {
         primaryKey: true,
       },
 
+      username: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+      },
+
       email: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -17,6 +23,12 @@ module.exports = {
       password_hash: {
         type: Sequelize.STRING,
         allowNull: false,
+      },
+
+      role: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: true,
       },
 
       created_at: {

@@ -12,6 +12,27 @@ export default class User extends Model {
           primaryKey: true,
         },
 
+        role: {
+          type: DataTypes.INTEGER,
+          defaultValue: 0,
+          allowNull: true,
+          isIn: [[0, 1]],
+        },
+
+        username: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: {
+            msg: "este nome de usuário já existe.",
+          },
+          validate: {
+            len: {
+              args: [3, 80],
+              msg: "Campo 'nome de usuário' deve ter entre (min)3 e (max)80 caracteres",
+            },
+          },
+        },
+
         email: {
           type: DataTypes.STRING,
           allowNull: false,

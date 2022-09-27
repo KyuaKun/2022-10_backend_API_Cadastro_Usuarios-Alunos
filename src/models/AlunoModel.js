@@ -59,6 +59,12 @@ export default class Aluno extends Model {
             },
           },
         },
+
+        registration: {
+          type: DataTypes.STRING,
+          defaultValue: DataTypes.NOW,
+          allowNull: false,
+        },
       },
       {
         sequelize,
