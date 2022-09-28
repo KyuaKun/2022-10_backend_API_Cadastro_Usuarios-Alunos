@@ -25,7 +25,7 @@ class UserController {
         attributes: ["id", "email", "username", "createdAt"],
         order: [["createdAt", "DESC"]],
       });
-      users == null
+      users == users.length > 0
         ? res.status(404).json({ response: "Nenhum usuário cadastrado." })
         : res.status(200).json({ all_users: users });
       return;
@@ -38,7 +38,7 @@ class UserController {
     try {
       const user = await UserModel.findByPk(req.params.id);
       const { id, name, email, createdAt, updatedAt } = user;
-      user == null
+      user == user.length > 0
         ? res.status(404).json({ response: "Nenhum usuário cadastrado." })
         : res.status(200).json({ id, name, email, createdAt, updatedAt });
       return;
