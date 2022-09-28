@@ -25,8 +25,10 @@ class UserController {
         attributes: ["id", "email", "username", "createdAt"],
         order: [["createdAt", "DESC"]],
       });
-
-      return res.status(200).json({ all_users: users });
+      users == null
+        ? res.status(404).json({ response: "Nenhum usuário cadastrado." })
+        : res.status(200).json({ all_users: users });
+      return;
     } catch (msg) {
       return res.status(400).json(null);
     }
