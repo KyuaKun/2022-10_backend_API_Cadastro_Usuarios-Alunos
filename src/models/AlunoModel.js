@@ -28,7 +28,7 @@ export default class Aluno extends Model {
           },
         },
 
-        lastName: {
+        last_name: {
           type: DataTypes.STRING,
           allowNull: false,
           validate: {
@@ -60,10 +60,24 @@ export default class Aluno extends Model {
           },
         },
 
+        email: {
+          type: DataTypes.STRING,
+          allowNull: true,
+          unique: {
+            msg: "Email já existe.",
+          },
+          validate: {
+            isEmail: {
+              msg: "Insira um email válido.",
+            },
+          },
+        },
+
         registration: {
           type: DataTypes.STRING,
-          defaultValue: DataTypes.NOW,
+          defaultValue: "",
           allowNull: false,
+          unique: true,
         },
       },
       {

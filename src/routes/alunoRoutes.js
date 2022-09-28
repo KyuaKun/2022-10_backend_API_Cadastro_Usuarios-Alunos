@@ -3,6 +3,7 @@ import AlunoController from "../controllers/AlunoController";
 
 const router = new Router();
 
-router.post("/");
+router.post("/", AlunoController.store);
+router.get("/", AlunoController.index);
 
 export default router;

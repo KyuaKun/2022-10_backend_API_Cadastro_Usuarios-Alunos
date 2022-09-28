@@ -13,9 +13,15 @@ module.exports = {
         allowNull: false,
       },
 
-      lastName: {
+      last_name: {
         type: Sequelize.STRING,
         allowNull: false,
+      },
+
+      email: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        unique: true,
       },
 
       age: {
@@ -26,6 +32,7 @@ module.exports = {
       registration: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
 
       created_at: {
