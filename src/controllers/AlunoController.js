@@ -31,9 +31,10 @@ class AlunoController {
         attributes: ["id", "name", "last_name", "age", "email", "registration"],
       });
 
-      alunos == null
+      alunos == alunos.length > 0
         ? res.status(404).json("Nenhum aluno cadastrado.")
         : res.status(200).json({ response: alunos });
+      console.log(alunos);
       return;
     } catch (msg) {
       console.log(msg);
