@@ -60,8 +60,42 @@ class AlunoController {
         .json({ error: msg.errors.map((err) => err.message) });
     }
   }
-  async update(req, res) {}
-  async delte(req, res) {}
+  async update(req, res) {
+    try {
+      const aluno = await AlunoModel.findByPk(req.params.id);
+
+      if (!aluno) {
+        return res.status(404).json({ error: "Nehum aluno encontrado." });
+      }
+
+      const { email, password, name, last_name } = req.body;
+      await AlunoModel.update(
+        { email: email, password: password, name: name, last_name: last_name },
+        { where: { id: req.prams.id } }
+      );
+
+      return res.status(200).json({ response: "Aluno atualizado." });
+    } catch (msg) {
+      return res
+        .status(400)
+        .json({ error: msg.errors.map((err) => err.message) });
+    }
+  }
+  async delete(req, res) {
+    try {
+      const aluno = await AlunoModel.findByPk(req.userId);
+      if (!aluno) {
+        return res.status(404).json({ error: "Nenhum usuário encontrado." });
+      }
+
+      await aluno.destroy();
+
+      return res.status(200).json({ response: "Usuário deletado." });
+    } catch (msg) {
+      console.log(msg);
+      return res.status(400).json({ error: "Algo inesperado aconteceu." });
+    }
+  }
 }
 
 export default new AlunoController();
