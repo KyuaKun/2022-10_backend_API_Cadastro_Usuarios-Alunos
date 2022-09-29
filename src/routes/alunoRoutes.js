@@ -5,5 +5,6 @@ const router = new Router();
 
 router.post("/", AlunoController.store);
 router.get("/", AlunoController.index);
+router.get("/:id", AlunoController.show);
 
 export default router;
