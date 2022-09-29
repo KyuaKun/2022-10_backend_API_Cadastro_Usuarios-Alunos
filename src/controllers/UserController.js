@@ -56,11 +56,13 @@ class UserController {
       if (!user) {
         return res.status(404).json({ error: "Nenhum usuário encontrado." });
       }
+
       const { email, password, username } = req.body;
       await UserModel.update(
         { email: email, password: password, username: username },
         { where: { id: req.userId } }
       );
+
       return res.status(200).json({ response: "Usuário atualizado." });
     } catch (msg) {
       return res
@@ -77,6 +79,7 @@ class UserController {
       }
 
       await user.destroy();
+
       return res.status(200).json({ response: "Usuário deletado." });
     } catch (msg) {
       console.log(msg);
