@@ -43,7 +43,23 @@ class AlunoController {
         .json({ error: msg.errors.map((err) => err.message) });
     }
   }
-  async show(req, res) {}
+  async show(req, res) {
+    try {
+      const aluno = await AlunoModel.findByPk(req.params.id);
+      const { id, name, last_name, email, createdAt, updatedAt } = aluno;
+
+      aluno == aluno.length > 0
+        ? res.status(404).json({ response: "Nenhum aluno encontrado" })
+        : res
+            .status(200)
+            .json({ id, name, last_name, email, createdAt, updatedAt });
+      return;
+    } catch (msg) {
+      return res
+        .status(400)
+        .json({ error: msg.errors.map((err) => err.message) });
+    }
+  }
   async update(req, res) {}
   async delte(req, res) {}
 }
