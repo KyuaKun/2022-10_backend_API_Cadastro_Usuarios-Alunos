@@ -62,6 +62,10 @@ class AlunoController {
   }
   async update(req, res) {
     try {
+      if (!req.params.id) {
+        return res.status(400).json("missing id");
+      }
+
       const aluno = await AlunoModel.findByPk(req.params.id);
 
       if (!aluno) {
@@ -83,7 +87,7 @@ class AlunoController {
   }
   async delete(req, res) {
     try {
-      const aluno = await AlunoModel.findByPk(req.userId);
+      const aluno = await AlunoModel.findByPk(req.params.id);
       if (!aluno) {
         return res.status(404).json({ error: "Nenhum usuário encontrado." });
       }
