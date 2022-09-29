@@ -38,12 +38,15 @@ class UserController {
     try {
       const user = await UserModel.findByPk(req.params.id);
       const { id, name, email, createdAt, updatedAt } = user;
+
       user == user.length > 0
         ? res.status(404).json({ response: "Nenhum usuário cadastrado." })
         : res.status(200).json({ id, name, email, createdAt, updatedAt });
       return;
     } catch (msg) {
-      return res.json(null);
+      return res
+        .status(400)
+        .json({ error: msg.errors.map((err) => err.message) });
     }
   }
 
