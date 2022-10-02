@@ -16,13 +16,13 @@ export default class User extends Model {
           type: DataTypes.INTEGER,
           defaultValue: 0,
           allowNull: true,
-          validate: {
-            customValidator(value) {
-              if (value != 0 || value != 1) {
-                throw new Error("Campo 'role' só aceita 0 ou 1.");
-              }
-            },
-          },
+          // validate: {
+          //   customValidator(value) {
+          //     if (value != 0 || value != 1 || value != null) {
+          //       throw new Error("Campo 'role' só aceita 0 ou 1.");
+          //     }
+          //   },
+          // },
         },
 
         username: {
