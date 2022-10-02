@@ -10,8 +10,9 @@ class UserController {
         });
       }
       const user = await UserModel.create(req.body);
-      const { id, email, username } = user;
-      return res.status(201).json({ new_user: { id, email, username } });
+      const { email, username } = user;
+
+      return res.status(201).json({ new_user: { email, username } });
     } catch (msg) {
       return res
         .status(400)
