@@ -1,10 +1,17 @@
+import multer from "multer";
+import multerConfig from "../config/multer";
+
+const upload = multer(multerConfig).single("photo");
+
 class PhotoController {
   async store(req, res) {
-    try {
+    return upload(req, res, (err) => {
+      if (err) {
+        return res.status(400).json({ error: err.code });
+      }
+
       return res.status(200).json(req.file);
-    } catch (msg) {
-      return res.status(500).json({ msg: "Ops! algo de errado aconteceu." });
-    }
+    });
   }
 }
 
