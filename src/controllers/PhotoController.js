@@ -1,9 +1,9 @@
 class PhotoController {
-  async index(req, res) {
+  async store(req, res) {
     try {
-      return res.status(200).json({ msg: "oi" });
+      return res.status(200).json(req.file);
     } catch (msg) {
-      return res.status(500).json({ msg: "algo aconteceu." });
+      return res.status(500).json({ msg: "Ops! algo de errado aconteceu." });
     }
   }
 }
