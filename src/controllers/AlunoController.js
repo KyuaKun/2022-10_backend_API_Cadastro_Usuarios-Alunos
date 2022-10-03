@@ -1,4 +1,5 @@
 import AlunoModel from "../models/AlunoModel";
+import Photo from "../models/PhotoModel";
 
 class AlunoController {
   async store(req, res) {
@@ -30,12 +31,16 @@ class AlunoController {
     try {
       const alunos = await AlunoModel.findAll({
         attributes: ["id", "name", "last_name", "age", "email", "registration"],
+        include: {
+          model: Photo,
+          attributes: ["url", "filename"],
+        },
+        order: [["createdAt", "DESC"]],
       });
 
       alunos == alunos.length > 0
         ? res.status(404).json("Nenhum aluno cadastrado.")
         : res.status(200).json({ response: alunos });
-      console.log(alunos);
       return;
     } catch (msg) {
       console.log(msg);
@@ -47,25 +52,28 @@ class AlunoController {
 
   async show(req, res) {
     try {
-      const aluno = await AlunoModel.findOne(req.params.id);
+      const aluno = await AlunoModel.findByPk(req.params.id, {
+        attributes: ["id", "name", "last_name", "age", "email", "registration"],
+        include: {
+          model: Photo,
+          attributes: ["url", "filename"],
+        },
+        order: [["createdAt", "DESC"]],
+      });
 
       if (!aluno) {
         return res.status(404).json({ response: "Nenhum aluno encontrado" });
       }
 
-      const { id, name, last_name, email, createdAt, updatedAt } = aluno;
-      return res
-        .status(200)
-        .json({ id, name, last_name, email, createdAt, updatedAt });
+      return res.status(200).json(aluno);
     } catch (msg) {
-      console.log(msg);
       return res.status(400).json(null);
     }
   }
 
   async update(req, res) {
     try {
-      const aluno = await AlunoModel.findOne(req.params.id);
+      const aluno = await AlunoModel.findByPk(req.params.id);
 
       if (!aluno) {
         return res.status(404).json({ error: "Nehum aluno encontrado." });
@@ -87,7 +95,7 @@ class AlunoController {
 
   async delete(req, res) {
     try {
-      const aluno = await AlunoModel.findOne(req.params.id);
+      const aluno = await AlunoModel.findByPk(req.params.id);
       if (!aluno) {
         return res.status(404).json({ error: "Nenhum usuário encontrado." });
       }
