@@ -3,25 +3,27 @@
 Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e alunos de uma faculdade.
 
 ## Comandos
+
 ```
 yarn - para instalar as dependências.
 yarn dev - para rodar.
 ```
 
   <summary>✔️ Funcionalidades:</summary>
-      <p align="justify">
-      1: CRUD completo.<br>
+    <p align="justify">
+        1: CRUD completo.<br>
       <!-- 2: Recuperação de senha por email<br> -->
       <!-- 3: Envio de email ao cadastrar usuario<br> -->
       <!-- 4: Validação de cpf<br> -->
-      2: Validação de E-mail.<br>
-      <!-- 6: Validação de datas<br> -->
-      3: Exceptions Personalizadas.<br>
-      4: TOKENS de Autenticação. <br>
-      5: Validação de roles. <br>
-      6: email e matrícula automatizados e padronizados para alunos.
+        2: Validação de E-mail.<br>
+    <!-- 6: Validação de datas<br> -->
+        3: Validações de senha.
+        3: Exceptions Personalizadas.<br>
+        4: TOKENS de Autenticação. <br>
+        5: Validação de roles. <br>
+        6: email e matrícula automatizados e padronizados para alunos.
       <!-- 9: Documentação com swagger <br> -->
-      
+    </p>
   </details>
 
    <details>
