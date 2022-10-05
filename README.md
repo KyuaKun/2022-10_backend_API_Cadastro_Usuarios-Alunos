@@ -21,10 +21,13 @@ yarn dev - para rodar.
         4: Exceptions Personalizadas.<br>
         5: TOKENS de Autenticação. <br>
         6: Validação de roles. <br>
-        7: email e matrícula automatizados e padronizados para alunos.
+      
       <!-- 9: Documentação com swagger <br> -->
-    </p>
+
+<p>
   </details>
+
+<br>
 
    <details>
   <summary>👨‍💼 Regras de negocio:</summary>
@@ -35,8 +38,12 @@ yarn dev - para rodar.
       <!-- 4: O usuario com acesso de treinamento e skills  pode recuperar dados das páginas relacionadas a Skills e treinamentos.<br> -->
       2: Somente um administrador pode cadastrar um novo usuário.<br>
       3: Usuários padrões podem fazer requisições de busca de todos os alunos. <br>
-      4: Atualizações e deleções são pelo próprio usuário e/ou aluno.
+      4: Atualizações e deleções são pelo próprio usuário e/ou aluno.<br>
+      5: Alunos podem cadastrar uma imagem. <br>
+      6: Geração de email e matrícula automatizados e padronizados para alunos. <br>
   </details>
+  
+  <br>
 
 ## Tecnologia Utilizada
 
