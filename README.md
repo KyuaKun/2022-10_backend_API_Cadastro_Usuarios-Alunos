@@ -12,7 +12,7 @@ Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e al
       <!-- 6: Validação de datas<br> -->
       3: Exceptions Personalizadas<br>
       4: TOKENS de Autenticação <br>
-      5: Validação de roles.
+      5: Validação de roles. <br>
       6: email e matrícula automatizados e padronizados para alunos
       <!-- 9: Documentação com swagger <br> -->
       
@@ -21,9 +21,19 @@ Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e al
    <details>
   <summary>👨‍💼 Regras de negocio:</summary>
       <p align="justify">
-      1: O usuario com acesso de administrador pode inserir, atualizar, recuperar e deletar dados de todas as páginas. <br>
+      1: O usuario com acesso de administrador pode inserir, recuperar dados de todas as páginas. <br>
       <!-- 2: O usuario com acesso de Treinamento pode recuperar dados das páginas relacionadas a Treinamentos.<br> -->
       <!-- 3: O usuario com acesso de Skills pode recuperar dados das páginas relacionadas a Skills. <br> -->
       <!-- 4: O usuario com acesso de treinamento e skills  pode recuperar dados das páginas relacionadas a Skills e treinamentos.<br> -->
       2: Somente um administrador pode cadastrar um novo usuário.<br>
+      3: Usuários padrões podem fazer requisições de busca de todos os alunos. <br>
+      4: Atualizações e deleções são pelo próprio usuário e/ou aluno.
   </details>
+
+## Desenvolvedor:
+
+<table>
+<tr>
+ <td align="center"><a href="https://github.com/KyuaKun"><img src="https://i.imgur.com/5vCpoRY.jpg" width="100px;" alt=""/><br /><sub><b>Vinícius Soares</b></sub></a><br /><a href="" title="Code">💻</a></td>
+</tr>
+</table>
