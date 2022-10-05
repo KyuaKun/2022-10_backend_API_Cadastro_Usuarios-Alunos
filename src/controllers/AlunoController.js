@@ -1,17 +1,16 @@
 import AlunoModel from "../models/AlunoModel";
 import Photo from "../models/PhotoModel";
+import AlunoService from "../service/AlunoService";
 
 class AlunoController {
   async store(req, res) {
     try {
-      const data = new Date();
-      const register = Date.now();
       const aluno = await AlunoModel.create({
-        email: `${req.body.name.toLowerCase()}${req.body.last_name.toLowerCase()}${data.getMilliseconds()}${data.getSeconds()}@duoimpar.com`,
+        email: AlunoService.generateEmail(req.body.name, req.body.last_name),
         name: req.body.name,
         last_name: req.body.last_name,
         age: req.body.age,
-        registration: register,
+        registration: AlunoService.generateRegistration(),
       });
 
       const { name, last_name, age, email, registration } = aluno;
