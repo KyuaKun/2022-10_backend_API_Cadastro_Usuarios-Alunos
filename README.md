@@ -4,16 +4,16 @@ Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e al
 
   <summary>✔️ Funcionalidades:</summary>
       <p align="justify">
-      1: CRUD completo<br>
+      1: CRUD completo.<br>
       <!-- 2: Recuperação de senha por email<br> -->
       <!-- 3: Envio de email ao cadastrar usuario<br> -->
       <!-- 4: Validação de cpf<br> -->
-      2: Validação de E-mail<br>
+      2: Validação de E-mail.<br>
       <!-- 6: Validação de datas<br> -->
-      3: Exceptions Personalizadas<br>
-      4: TOKENS de Autenticação <br>
+      3: Exceptions Personalizadas.<br>
+      4: TOKENS de Autenticação. <br>
       5: Validação de roles. <br>
-      6: email e matrícula automatizados e padronizados para alunos
+      6: email e matrícula automatizados e padronizados para alunos.
       <!-- 9: Documentação com swagger <br> -->
       
   </details>
@@ -30,10 +30,19 @@ Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e al
       4: Atualizações e deleções são pelo próprio usuário e/ou aluno.
   </details>
 
+## Tecnologia Utilizada
+
+- [**MySQL**]
+- [**Postman**]
+- [**MySQL Workbench**]
+- [**bcryptjs**]
+
+<br>
+
 ## Desenvolvedor:
 
 <table>
-<tr>
- <td align="center"><a href="https://github.com/KyuaKun"><img src="https://i.imgur.com/5vCpoRY.jpg" width="100px;" alt=""/><br /><sub><b>Vinícius Soares</b></sub></a><br /><a href="" title="Code">💻</a></td>
-</tr>
+    <tr>
+        <td align="center"><a href="https://github.com/KyuaKun"><img src="https://i.imgur.com/5vCpoRY.jpg" width="100px;" alt=""/><br /><sub><b>Vinícius Soares</b></sub></a><br /><a href="" title="Code">💻</a></td>
+    </tr>
 </table>
