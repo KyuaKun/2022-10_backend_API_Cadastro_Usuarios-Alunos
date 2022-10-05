@@ -2,6 +2,12 @@
 
 Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e alunos de uma faculdade.
 
+## Comandos
+```
+yarn - para instalar as dependências.
+yarn dev - para rodar.
+```
+
   <summary>✔️ Funcionalidades:</summary>
       <p align="justify">
       1: CRUD completo.<br>
@@ -35,7 +41,11 @@ Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e al
 - [**MySQL**]
 - [**Postman**]
 - [**MySQL Workbench**]
-- [**bcryptjs**]
+- [**Sequelize**]
+- [**Sequelize-cli**]
+- [**Express**]
+- [**Multer**]
+- [**UUIDV4**]
 
 <br>
 
