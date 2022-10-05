@@ -9,23 +9,21 @@ yarn - para instalar as dependências.
 yarn dev - para rodar.
 ```
 
-  <summary>✔️ Funcionalidades:</summary>
-    <p align="justify">
-        1: CRUD completo.<br>
+<summary>✔️ Funcionalidades:</summary>
+    <details>
+        <p align="justify">
+            1: CRUD completo.<br>
       <!-- 2: Recuperação de senha por email<br> -->
       <!-- 3: Envio de email ao cadastrar usuario<br> -->
       <!-- 4: Validação de cpf<br> -->
-        2: Validação de E-mail.<br>
+            2: Validação de E-mail.<br>
     <!-- 6: Validação de datas<br> -->
-        3: Validações de senha. <br>
-        4: Exceptions Personalizadas.<br>
-        5: TOKENS de Autenticação. <br>
-        6: Validação de roles. <br>
-      
-      <!-- 9: Documentação com swagger <br> -->
-
-<p>
-  </details>
+            3: Validações de senha. <br>
+            4: Exceptions Personalizadas.<br>
+            5: TOKENS de Autenticação. <br>
+            6: Validação de roles. <br>
+         <p>
+    </details>
 
 <br>
 
