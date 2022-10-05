@@ -23,7 +23,7 @@ export default class Aluno extends Model {
           validate: {
             isAlpha: {
               args: true,
-              msg: "Este campo só aceita letras.",
+              msg: "Apenas o primeiro nome. Sem espaços em branco, simbolos e/ou 'ç'",
             },
           },
         },
@@ -40,7 +40,7 @@ export default class Aluno extends Model {
           validate: {
             isAlpha: {
               args: true,
-              msg: "Este campo só aceita letras.",
+              msg: "Apenas o ultimo nome. Sem espaços em branco, simbolos e/ou 'ç'",
             },
           },
         },
