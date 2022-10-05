@@ -17,11 +17,11 @@ yarn dev - para rodar.
       <!-- 4: Validação de cpf<br> -->
         2: Validação de E-mail.<br>
     <!-- 6: Validação de datas<br> -->
-        3: Validações de senha.
-        3: Exceptions Personalizadas.<br>
-        4: TOKENS de Autenticação. <br>
-        5: Validação de roles. <br>
-        6: email e matrícula automatizados e padronizados para alunos.
+        3: Validações de senha. <br>
+        4: Exceptions Personalizadas.<br>
+        5: TOKENS de Autenticação. <br>
+        6: Validação de roles. <br>
+        7: email e matrícula automatizados e padronizados para alunos.
       <!-- 9: Documentação com swagger <br> -->
     </p>
   </details>
