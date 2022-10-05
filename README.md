@@ -42,7 +42,7 @@ yarn dev - para rodar.
       5: Alunos podem cadastrar uma imagem. <br>
       6: Geração de email e matrícula automatizados e padronizados para alunos. <br>
   </details>
-  
+
   <br>
 
 ## Tecnologia Utilizada
@@ -62,6 +62,6 @@ yarn dev - para rodar.
 
 <table>
     <tr>
-        <td align="center"><a href="https://github.com/KyuaKun"><img src="https://i.imgur.com/5vCpoRY.jpg" width="100px;" alt=""/><br /><sub><b>Vinícius Soares</b></sub></a><br /><a href="" title="Code">💻</a></td>
+        <td align="center"><a href="https://github.com/KyuaKun"><img src="https://i.imgur.com/5vCpoRY.jpg" width="100px;" alt=""/><br /><sub><b>Vinícius Soares</b></sub></a><br /><a href="https://www.linkedin.com/in/vin%C3%ADcius-soares-43238b144/" title="Code">💻</a></td>
     </tr>
 </table>
