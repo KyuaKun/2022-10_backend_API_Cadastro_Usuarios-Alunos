@@ -16,31 +16,28 @@ export default class User extends Model {
           type: DataTypes.INTEGER,
           defaultValue: 0,
           allowNull: true,
-          // validate: {
-          //   customValidator(value) {
-          //     if (value != 0 || value != 1 || value != null) {
-          //       throw new Error("Campo 'role' só aceita 0 ou 1.");
-          //     }
-          //   },
-          // },
         },
 
         username: {
           type: DataTypes.STRING,
           allowNull: false,
           unique: {
-            msg: "este nome de usuário já existe.",
+            msg: "Este nome de usuário já existe.",
           },
           validate: {
             len: {
               args: [3, 80],
               msg: "Campo 'nome de usuário' deve ter entre (min)3 e (max)80 caracteres",
             },
-          },
-          validate: {
             is: {
               args: ["^[a-z0-9]+$", "i"],
               msg: "Nome usuário não pode conter espaços em branco.",
+            },
+            notNull: {
+              msg: "Campo 'usuário' não pode permanecer vazio.",
+            },
+            notEmpty: {
+              msg: "Campo 'usuário' não pode permanecer vazio.",
             },
           },
         },
@@ -54,6 +51,12 @@ export default class User extends Model {
           validate: {
             isEmail: {
               msg: "Insira um email válido.",
+            },
+            notNull: {
+              msg: "Campo 'email' não pode permanecer vazio.",
+            },
+            notEmpty: {
+              msg: "Campo 'email' não pode permanecer vazio.",
             },
           },
         },
@@ -72,8 +75,9 @@ export default class User extends Model {
               args: [6, 50],
               msg: "Senha deve conter no mínimo 6 caracteres",
             },
-          },
-          validate: {
+            notNull: {
+              msg: "Senha não permanecer vazio.",
+            },
             is: {
               args: ["^[a-z0-9]+$", "i"],
               msg: "Senha não pode conter espaços em branco.",
