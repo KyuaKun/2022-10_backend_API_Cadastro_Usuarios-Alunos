@@ -26,8 +26,9 @@ yarn dev - para rodar.
 
 <br>
 
-   <details>
+   
   <summary>👨‍💼 Regras de negocio:</summary>
+  <details>
       <p align="justify">
       1: O usuario com acesso de administrador pode inserir, recuperar dados de todas as páginas. <br>
       2: Não é possível criar usuários administradores pelas rotas, somente usando "seeds". <br>
