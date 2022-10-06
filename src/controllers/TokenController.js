@@ -6,7 +6,7 @@ class TokenController {
     try {
       const { email, username, password } = req.body;
 
-      if (!email || !password || !username) {
+      if (!email || !password) {
         return res.status(400).json({ response: "Credências inválidas." });
       }
 
