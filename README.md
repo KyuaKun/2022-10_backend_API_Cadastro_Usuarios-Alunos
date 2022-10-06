@@ -13,7 +13,7 @@ yarn dev - para rodar.
     <details>
         <p align="justify">
             1: CRUD completo.<br>
-            2: Validação de E-mail.<br>
+            2: Validação de e-mail.<br>
             3: Validações de senha. <br>
             4: Exceptions Personalizadas.<br>
             5: TOKENS de Autenticação. <br>
@@ -32,10 +32,9 @@ yarn dev - para rodar.
       1: O usuario com acesso de administrador pode inserir, recuperar dados de todas as páginas. <br>
       2: Não é possível criar usuários administradores pelas rotas, somente usando "seeds". <br>
       2: Somente um administrador pode cadastrar um novo usuário.<br>
-      3: Usuários padrões podem fazer requisições de busca de todos os alunos. <br>
-      4: Atualizações e deleções são pelo próprio usuário e/ou aluno.<br>
-      5: Alunos podem cadastrar uma imagem/avatar. <br>
-      6: Geração de email e matrícula automatizados e padronizados para alunos. <br>
+      3: Usuários adminitradores e comuns podem fazer todas requisições em entidades aluno. <br>
+      4: Alunos podem cadastrar uma imagem/avatar em seu perfil. <br>
+      5: Geração de email e matrícula automatizados e padronizados( AAAAPUUCCCSSS-V ) para alunos. <br>
   </details>
 
   <br>
@@ -54,7 +53,9 @@ yarn dev - para rodar.
 <br>
 
 ## Autenficação:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Realizar login através do endpoint /auth </a>, será gerado um TOKEN de 72 horas**  
+**Realizar login através do endpoint /auth </a>, será gerado um TOKEN de 72 horas**  
+
+<p> (contém algumas demonstrações de exceptions) </p>
 
  <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194180614-d955387f-6098-49b8-af14-bab2b1eaac1a.gif">
@@ -63,6 +64,7 @@ yarn dev - para rodar.
 <br>
 
 ## Cadastrando Usuário comum:
+<p> (contém algumas demonstrações de exceptions) </p>
 
 <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194191594-70c52003-a44b-44d1-b87d-b5c3d5152561.gif">
@@ -70,12 +72,44 @@ yarn dev - para rodar.
 
 <br>
 
+#### Outras exceptions
+
+status 401: Unauthorized
+<p> Acontece quando o usuário logado como usuário comum e tenta cadastrar outro usuário </p>
+
+```
+{
+    "response": "Usuário sem autorização"
+}
+```
+
+status 400: Bad request
+<p> Acontece quando há tentativa de cirar um usuário administrador pela rota post http://localhost:6558/users <p>
+
+```
+{
+    "error": "Está rota não tem permissão para criar usuários administradores."
+}
+```
+
+<br>
+
 ## Cadastrando Aluno:
+<p> (contém algumas demonstrações de exceptions) </p>
 
  <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194189495-49b13640-b38f-4de9-af59-a188d39d9f61.gif">
 </div>
 
+### **Apesar dos dados do aluno coincidir com a de um aluno já cadastrado, o email e a matrícula, gerados automaticamente, nunca se repetirão.**
+
+<br>
+
+## Vinculando foto a um aluno: 
+
+<div align="center">
+  <img width="800px" src="https://user-images.githubusercontent.com/87536346/194194390-b112e405-8b02-4e04-909f-171bf256ba0a.gif">
+</div>
 
 ## Desenvolvedor:
 
@@ -87,8 +121,3 @@ yarn dev - para rodar.
         </sub>
     </tr>
 </table>
-
-
-
-
-
