@@ -45,7 +45,7 @@ yarn dev - para rodar.
   <br>
 
 <sumary>⚙ Tecnologias utilizadas </sumary>
-<details>
+
 - [**MySQL**]
 - [**Postman**]
 - [**MySQL Workbench**]
@@ -54,7 +54,6 @@ yarn dev - para rodar.
 - [**Express**]
 - [**Multer**]
 - [**UUIDV4**]
-</details>
 
 <br>
 
