@@ -20,7 +20,7 @@ yarn dev - para rodar.
             6: Validação de roles. <br>
             7: Migrations para criação de tables. <br>
             8: Seeds para inserção de entidades. <br>
-            9: Middlewares. <br>
+            9: Middlewares: usuário adm && usuário comum. <br>
          </p>
     </details>
 
@@ -30,18 +30,18 @@ yarn dev - para rodar.
   <summary>👨‍💼 Regras de negocio:</summary>
   <details>
       <p align="justify">
-      1: O usuario com acesso de administrador pode inserir, recuperar dados de todas as páginas. <br>
+      1: O usuario com acesso de administrador pode inserir e recuperar dados de todas as páginas. <br>
       2: Não é possível criar usuários administradores pelas rotas, somente usando "seeds". <br>
       2: Somente um administrador pode cadastrar um novo usuário.<br>
-      3: Usuários adminitradores e comuns podem fazer todas requisições em entidades aluno. <br>
+      3: Usuários administradores e comuns podem fazer todas requisições em entidades aluno. <br>
       4: Alunos podem cadastrar uma imagem/avatar em seu perfil. <br>
-      5: Geração de email e matrícula automatizados e padronizados( AAAAPUUCCCSSS-V ) para alunos. <br>
+      5: Geração de email e matrícula automatizados e padronizados( matrícula: AAAAPUUCCCSSS-V | e-mail: ...@duoimpar.com ) para alunos. <br>
   </details>
 
   <br>
 
 ## Tecnologia Utilizada
-
+<details>
 - [**MySQL**]
 - [**Postman**]
 - [**MySQL Workbench**]
@@ -50,6 +50,7 @@ yarn dev - para rodar.
 - [**Express**]
 - [**Multer**]
 - [**UUIDV4**]
+</details>
 
 <br>
 
