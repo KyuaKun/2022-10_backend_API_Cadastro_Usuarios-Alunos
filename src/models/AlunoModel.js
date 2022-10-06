@@ -19,11 +19,15 @@ export default class Aluno extends Model {
               args: [3, 80],
               msg: "Campo 'nome' deve ter entre (min)3 e (max)80 caracteres",
             },
-          },
-          validate: {
             isAlpha: {
               args: true,
               msg: "Apenas o primeiro nome. Sem espaços em branco, simbolos e/ou 'ç'",
+            },
+            notNull: {
+              msg: "Campo 'idade' não pode permanecer vazio.",
+            },
+            notEmpty: {
+              msg: "Campo 'idade' não pode permanecer vazio.",
             },
           },
         },
@@ -36,11 +40,15 @@ export default class Aluno extends Model {
               args: [3, 80],
               msg: "Campo 'sobrenome' deve ter entre (min)3 e (max)80 caracteres",
             },
-          },
-          validate: {
             isAlpha: {
               args: true,
               msg: "Apenas o ultimo nome. Sem espaços em branco, simbolos e/ou 'ç'",
+            },
+            notNull: {
+              msg: "Campo 'idade' não pode permanecer vazio.",
+            },
+            notEmpty: {
+              msg: "Campo 'idade' não pode permanecer vazio.",
             },
           },
         },
@@ -49,13 +57,20 @@ export default class Aluno extends Model {
           type: DataTypes.STRING,
           allowNull: false,
           validate: {
-            isInt: {
-              msg: "Campo 'idade' aceita apenas números sem vírgulas ou pontos.",
-            },
-          },
-          validate: {
             notNull: {
               msg: "Campo 'idade' não pode permanecer vazio.",
+            },
+            notEmpty: {
+              msg: "Campo 'idade' não pode permanecer vazio.",
+            },
+            notNumber(value) {
+              parseInt(value);
+              if (isNaN(value)) {
+                throw new Error("Campo 'idade' só aceita números.");
+              }
+            },
+            isInt: {
+              msg: "Campo 'idade' aceita apenas números inteiros e sem vírgulas",
             },
           },
         },
