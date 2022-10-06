@@ -60,6 +60,16 @@ yarn dev - para rodar.
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194180614-d955387f-6098-49b8-af14-bab2b1eaac1a.gif">
 </div>
 
+<br>
+
+## Cadastrando Usuário comum:
+
+<div align="center">
+  <img width="800px" src="https://user-images.githubusercontent.com/87536346/194191594-70c52003-a44b-44d1-b87d-b5c3d5152561.gif">
+</div>
+
+<br>
+
 ## Cadastrando Aluno:
 
  <div align="center">
