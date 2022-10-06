@@ -1,6 +1,6 @@
 # API de Usuários e Alunos
 
-Projeto de CRUD orientado ao objeto de Usuários ( normal e administrador ) e alunos de uma faculdade fictícia.
+Projeto de CRUD orientado ao objeto Cadastro de usuários ( comum e administrador ) e alunos de uma faculdade fictícia.
 
 ## Comandos
 
@@ -56,7 +56,7 @@ yarn dev - para rodar.
 ## Autenficação:
 **Realizar login através do endpoint /auth </a>, será gerado um TOKEN de 72 horas**  
 
-<p> (contém algumas demonstrações de exceptions) </p>
+<p><b><i> (contém algumas demonstrações de exceptions) </i></b></p>
 
  <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194180614-d955387f-6098-49b8-af14-bab2b1eaac1a.gif">
@@ -65,7 +65,7 @@ yarn dev - para rodar.
 <br>
 
 ## Cadastrando Usuário comum:
-<p> (contém algumas demonstrações de exceptions) </p>
+<p><b><i> (contém algumas demonstrações de exceptions) </i></b></p>
 
 <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194191594-70c52003-a44b-44d1-b87d-b5c3d5152561.gif">
@@ -96,7 +96,7 @@ status 400: Bad request
 <br>
 
 ## Cadastrando Aluno:
-<p> (contém algumas demonstrações de exceptions) </p>
+<p><b><i> (contém algumas demonstrações de exceptions) </i></b></p>
 
  <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194189495-49b13640-b38f-4de9-af59-a188d39d9f61.gif">
