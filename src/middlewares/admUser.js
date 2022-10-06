@@ -18,7 +18,7 @@ export default async (req, res, next) => {
       where: { id, email },
     });
     if (!user || user.role != 1) {
-      return res.status(401).json({ response: "Usuário inválido ou sem autorização" });
+      return res.status(401).json({ response: "Usuário sem autorização" });
     }
 
     req.userId = id;
