@@ -16,7 +16,6 @@ yarn dev - para rodar.
 <br>
 
 <summary>✔️ Funcionalidades:</summary>
-
     <details>
         <p align="justify">
             1: CRUD completo.<br>
