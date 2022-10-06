@@ -53,6 +53,20 @@ yarn dev - para rodar.
 
 <br>
 
+## Autenficação:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Realizar login através do endpoint /auth </a>, será gerado um TOKEN de 72 horas**  
+
+ <div align="center">
+  <img width="800px" src="https://user-images.githubusercontent.com/87536346/194180614-d955387f-6098-49b8-af14-bab2b1eaac1a.gif">
+</div>
+
+## Cadastrando Aluno:
+
+ <div align="center">
+  <img width="800px" src="https://user-images.githubusercontent.com/87536346/194189495-49b13640-b38f-4de9-af59-a188d39d9f61.gif">
+</div>
+
+
 ## Desenvolvedor:
 
 <table>
