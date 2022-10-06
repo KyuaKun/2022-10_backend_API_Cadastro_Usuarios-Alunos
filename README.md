@@ -2,12 +2,16 @@
 
 Projeto de CRUD orientado ao objeto Cadastro de usuários ( comum e administrador ) e alunos de uma faculdade fictícia.
 
+<br>
+
 ## Comandos
 
 ```
 yarn - para instalar as dependências.
 yarn dev - para rodar.
 ```
+
+<br>
 
 <summary>✔️ Funcionalidades:</summary>
     <details>
@@ -40,7 +44,7 @@ yarn dev - para rodar.
 
   <br>
 
-## Tecnologia Utilizada
+<sumary>⚙ Tecnologias utilizadas </sumary>
 <details>
 - [**MySQL**]
 - [**Postman**]
@@ -112,6 +116,8 @@ status 400: Bad request
 <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194194390-b112e405-8b02-4e04-909f-171bf256ba0a.gif">
 </div>
+
+<br>
 
 ## Desenvolvedor:
 
